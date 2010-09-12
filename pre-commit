@@ -1,0 +1,7 @@
+#!/bin/sh
+dir=pre-commit-hooks
+
+$dir/php-syntax-check.sh
+$dir/check-indentation.sh
+$dir/protect-branch.sh production
+$dir/check-domain.sh companydomain.com
