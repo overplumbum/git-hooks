@@ -1,7 +1,8 @@
-#!/bin/sh
-dir=pre-commit-hooks
+#!/bin/sh -e
+set -e
+dir=......./git-hooks/pre-commit-hooks
 
-$dir/php-syntax-check.sh
+$dir/check-domain.sh domain.com
 $dir/check-indentation.sh
-$dir/protect-branch.sh production
-$dir/check-domain.sh companydomain.com
+$dir/php-syntax-check.sh
+$dir/protect-branch.sh
